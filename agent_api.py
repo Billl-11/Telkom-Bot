@@ -155,6 +155,7 @@ def create_agent(bot_id):
 
 api_pass = os.getenv("API_PASS")
 
+# restfulapi
 @app.route('/telkom-bot/topic_id=<string:params>', methods=['POST'])
 def engine(params):
 
