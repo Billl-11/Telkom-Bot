@@ -3,7 +3,7 @@ name: Telkomsite-Engine
 on:
   push:
     branches:
-      - main
+      - deployment
 
 env:
   PROJECT_ID: ${{ secrets.CLOUD_RUN_PROJECT_NAME }}
