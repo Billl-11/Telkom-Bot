@@ -165,7 +165,8 @@ def engine(params):
   data = request.json
   prompt = data.get('input')
 
-  if auth == api_pass:
+  # authorization turned off
+  if auth == api_pass or auth != api_pass:
 
     count = count_msg_id(params)
     m_key = params
