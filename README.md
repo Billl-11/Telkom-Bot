@@ -1,27 +1,51 @@
 # Bot Asisten Telkom menggunakan GPT-3.5 LLM
 
-## Deskripsi Proyek
-Proyek ini bertujuan untuk membuat bot asisten yang memanfaatkan model bahasa besar GPT-3.5 (Large Language Model) untuk memberikan informasi seputar Telkom dengan dasar data dari situs telkom.co.id. Bot ini akan di-deploy sebagai REST API dengan kemampuan untuk menyimpan percakapan pengguna dan bot ke dalam database MySQL.
+## Project Description
+This project aims to create an assistant bot that leverages the large language model GPT-3.5 (Large Language Model) to provide information about Telkom based on data from the telkom.co.id website. This bot will be deployed as a REST API with the ability to store user and bot conversations in a MySQL database.
 
-##  Langkah-langkah Implementasi
-Berikut adalah langkah-langkah implementasi proyek ini:
+##  Implementation Steps
+Here are the implementation steps for this project:
 
-**1. Pemahaman GPT-3.5 LLM:**
-Proyek ini menggunakan LLM GPT-3.5-turbo yang diakses melalui API OpenAI.
+**1. Understanding GPT-3.5 LLM:**
+This project utilizes the GPT-3.5-turbo language model accessed through the OpenAI API.
 
-**2. Integrasi dengan Data Telkom.co.id:**
-Web scraping dari situs web telkom.co.id menggunakan library web scraping BeautifulSoup.
+**2. Integration with Telkom.co.id Data:**
+Web scraping from the telkom.co.id website using the BeautifulSoup web scraping library.
 
-**3. Pengembangan Bot Asisten:**
-Library LangChain digunakan untuk membuat LLM asisten yang dapat menjawab pertanyaan pengguna berdasarkan data yang diambil dari telkom.co.id.
+**3. Development of Assistant Bot:**
+The LangChain library is used to create an LLM assistant capable of answering user questions based on data fetched from telkom.co.id.
 
-**4. Deployment sebagai REST API:**
-Deploy bot asisten sebagai REST API menggunakan framework Flask.
+**4. Deployment as a REST API:**
+Deploy the assistant bot as a REST API using the Flask framework.
 
-**5. Database MySQL:**
-Database MySQL digunakan untuk menyimpan percakapan pengguna dan bot.
+**5. MySQL Database:**
+A MySQL database is used to store user and bot conversations.
 
-**6. Parameter topic_id:**
-API memiliki parameter topic_id yang digunakan untuk mengidentifikasi percakapan pengguna dan bot. Parameter ini juga berfungsi agar pengguna dapat melanjutkan percakapan terdahulu
+**6. topic_id Parameter:**
+The API has a topic_id parameter used to identify user and bot conversations. This parameter also serves to allow users to continue previous conversations.
 
-## Penggunaan API
+## How to use API (Python)
+```
+import requests
+
+# your prompt
+prompt = "hello"
+
+data = data = {'input': prompt}
+
+# topic_id should be something random
+topic_id = 'fnf87dqbfof'
+
+# API url
+url = f"https://telkomsite-engine-2uittvl6zq-as.a.run.app/telkom-bot/topic_id={topic_id}"
+
+# request to api
+response = requests.post(url, json=data)
+# print(response)
+response_dict = response.json()
+model_response = response_dict['output']
+
+print(model_response)
+```
+
+> The current state of the RestAPI lacks password protection, and there is a possibility that it will be password protected in the future.
