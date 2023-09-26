@@ -1,4 +1,4 @@
-# Bot Asisten Telkom menggunakan GPT-3.5 LLM
+# The Telkom Assistant Bot Wtih GPT-3.5 Large Language Model (LLM) 
 
 ## Project Description
 This project aims to create an assistant bot that leverages the large language model GPT-3.5 (Large Language Model) to provide information about Telkom based on data from the telkom.co.id website. This bot will be deployed as a REST API with the ability to store user and bot conversations in a MySQL database.
