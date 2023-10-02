@@ -49,3 +49,7 @@ print(model_response)
 ```
 
 > The current state of the RestAPI lacks password protection, and there is a possibility that it will be password protected in the future.
+
+## Getting Started
+Web App: [https://telkombot.maulayaradhibilla.com/](https://telkombot.maulayaradhibilla.com/)
+Web Repostiory: [https://github.com/Billl-11/TelkomSites-Bot](https://github.com/Billl-11/TelkomSites-Bot)
