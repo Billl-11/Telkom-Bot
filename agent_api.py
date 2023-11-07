@@ -25,6 +25,7 @@ apikey = os.getenv("API_KEY")
 embeddings_openai = OpenAIEmbeddings(openai_api_key = apikey)
 
 llm_openai = ChatOpenAI(openai_api_key = apikey,
+                        model_name='gpt-4',
                         temperature=0
                         )
 
