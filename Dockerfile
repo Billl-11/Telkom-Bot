@@ -6,6 +6,6 @@ COPY . /app
 
 RUN pip install -r requirements.txt
 
-EXPOSE 5010
+EXPOSE 8080
 
 CMD ["python3", "agent_api.py"]
